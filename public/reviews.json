@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "user": "Rahim",
+    "eventId": "1",
+    "rating": 5,
+    "comment": "Amazing event, learned a lot!",
+    "date": "2025-12-10T10:00:00Z"
+  },
+  {
+    "id": "2",
+    "user": "Karim",
+    "eventId": "2",
+    "rating": 4,
+    "comment": "Great music festival!",
+    "date": "2025-12-12T12:30:00Z"
+  },
+  {
+    "id": "3",
+    "user": "Sumi",
+    "eventId": "1",
+    "rating": 5,
+    "comment": "Loved the tech talks!",
+    "date": "2025-12-15T09:45:00Z"
+  },
+  {
+    "id": "4",
+    "user": "Ruhi",
+    "eventId": "1",
+    "rating": 5,
+    "comment": "Loved the tech talks!",
+    "date": "2025-12-15T09:45:00Z"
+  },
+  {
+    "id": "5",
+    "user": "Sabbir",
+    "eventId": "1",
+    "rating": 5,
+    "comment": "Loved the tech talks!",
+    "date": "2025-12-15T09:45:00Z"
+  }
+]

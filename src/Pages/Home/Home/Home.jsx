@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from '../Searchbar/Searchbar';
 import FeaturedEvents from '../FeaturedEvents/FeaturedEvenets';
 import CategoriesSection from '../Categories/Categories';
+import RecentReviews from '../Reviews/RecentReviews';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <SearchBar></SearchBar>
             <FeaturedEvents></FeaturedEvents>
             <CategoriesSection></CategoriesSection>
+            <RecentReviews></RecentReviews>
         </div>
     );
 };

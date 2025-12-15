@@ -13,9 +13,9 @@ const CategoriesSection = () => {
   return (
     <section className="mt-14">
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-base-content">Browse by Categories</h2>
+        <h2 className="text-3xl font-bold text-base-content">Event Categories Categories</h2>
         <p className="text-base-content/70 mt-2">
-          Explore events based on your interests
+          Our all event categories are here
         </p>
       </div>
 
