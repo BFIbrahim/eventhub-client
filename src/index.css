@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark;
+}
+
+@plugin "daisyui/theme" {
+  name: "EventHub_Theme";
+  default: true;
+
+  --color-primary: #0096c7;
+  --color-secondary: #90e0ef;
+  --color-accent: #495057;
+   --color-base-content: #000000;
+
+}
