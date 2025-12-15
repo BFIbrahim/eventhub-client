@@ -7,7 +7,11 @@
     "category": "Tech",
     "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
     "seats": 120,
-    "featured": true
+    "featured": true,
+    "description": "Join industry leaders to explore the latest in technology trends and innovations.",
+    "organizer": "Bangladesh Tech Association",
+    "registrationDeadline": "2025-06-20",
+    "registrationFee": 1500
   },
   {
     "_id": "2",
@@ -17,7 +21,11 @@
     "category": "Music",
     "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
     "seats": 200,
-    "featured": true
+    "featured": true,
+    "description": "Experience live performances from top local and international artists.",
+    "organizer": "Chittagong Music Society",
+    "registrationDeadline": "2025-06-25",
+    "registrationFee": 1200
   },
   {
     "_id": "3",
@@ -27,7 +35,11 @@
     "category": "Business",
     "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
     "seats": 80,
-    "featured": true
+    "featured": true,
+    "description": "Network with entrepreneurs and business professionals to explore new opportunities.",
+    "organizer": "Dhaka Business Network",
+    "registrationDeadline": "2025-07-01",
+    "registrationFee": 800
   },
   {
     "_id": "4",
@@ -37,7 +49,11 @@
     "category": "Art",
     "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
     "seats": 50,
-    "featured": false
+    "featured": false,
+    "description": "Explore and purchase unique artworks and handcrafted items from local artists.",
+    "organizer": "Khulna Art Council",
+    "registrationDeadline": "2025-07-05",
+    "registrationFee": 500
   },
   {
     "_id": "5",
@@ -47,7 +63,11 @@
     "category": "Business",
     "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
     "seats": 60,
-    "featured": false
+    "featured": false,
+    "description": "Present your startup ideas to potential investors and gain valuable feedback.",
+    "organizer": "Dhaka Startup Hub",
+    "registrationDeadline": "2025-07-08",
+    "registrationFee": 1000
   },
   {
     "_id": "6",
@@ -57,7 +77,11 @@
     "category": "Health",
     "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528",
     "seats": 40,
-    "featured": false
+    "featured": false,
+    "description": "Relax and rejuvenate with yoga sessions and wellness activities in nature.",
+    "organizer": "Sylhet Wellness Center",
+    "registrationDeadline": "2025-07-10",
+    "registrationFee": 2000
   },
   {
     "_id": "7",
@@ -67,7 +91,11 @@
     "category": "Tech",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
     "seats": 100,
-    "featured": false
+    "featured": false,
+    "description": "Intensive coding sessions covering the latest web and software development technologies.",
+    "organizer": "Dhaka Code Academy",
+    "registrationDeadline": "2025-07-15",
+    "registrationFee": 1800
   },
   {
     "_id": "8",
@@ -77,7 +105,11 @@
     "category": "Music",
     "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
     "seats": 150,
-    "featured": false
+    "featured": false,
+    "description": "Join musicians and music lovers for a fun jam night and live performances.",
+    "organizer": "Chittagong Music Society",
+    "registrationDeadline": "2025-07-20",
+    "registrationFee": 1000
   },
   {
     "_id": "9",
@@ -87,7 +119,11 @@
     "category": "Art",
     "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
     "seats": 30,
-    "featured": false
+    "featured": false,
+    "description": "Learn photography techniques from professional photographers in hands-on sessions.",
+    "organizer": "Dhaka Photography Club",
+    "registrationDeadline": "2025-07-25",
+    "registrationFee": 1500
   },
   {
     "_id": "10",
@@ -97,7 +133,11 @@
     "category": "Business",
     "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
     "seats": 70,
-    "featured": false
+    "featured": false,
+    "description": "Gain insights into successful business strategies from industry experts.",
+    "organizer": "Khulna Business Association",
+    "registrationDeadline": "2025-07-28",
+    "registrationFee": 1200
   },
   {
     "_id": "11",
@@ -107,7 +147,11 @@
     "category": "Tech",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
     "seats": 90,
-    "featured": false
+    "featured": false,
+    "description": "Meet tech enthusiasts and professionals to discuss technology trends and projects.",
+    "organizer": "Sylhet Tech Forum",
+    "registrationDeadline": "2025-08-01",
+    "registrationFee": 1300
   },
   {
     "_id": "12",
@@ -117,6 +161,10 @@
     "category": "Music",
     "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528",
     "seats": 120,
-    "featured": false
+    "featured": false,
+    "description": "Showcase your talent or enjoy performances by local artists in a casual open mic setting.",
+    "organizer": "Dhaka Arts & Music Club",
+    "registrationDeadline": "2025-08-05",
+    "registrationFee": 800
   }
 ]

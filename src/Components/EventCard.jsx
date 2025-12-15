@@ -22,7 +22,7 @@ const EventCard = ({ event }) => {
           <FaChair className="mr-1" /> {event.seats} seats
         </div>
         <Link
-          to={`/events/${event.id}`}
+          to={`/eventsDetails/${event._id}`}
           className="mt-auto btn btn-primary w-full text-center"
         >
           View Details

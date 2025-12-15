@@ -17,7 +17,7 @@ const FeaturedEvents = () => {
   return (
     <div className="container mx-auto px-4 mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
       {events.map(event => (
-        <EventCard key={event.id} event={event} />
+        <EventCard key={event._id} event={event} />
       ))}
     </div>
   );
