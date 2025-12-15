@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "1",
+    "title": "Tech Conference 2025",
+    "date": "2025-06-25",
+    "location": "Dhaka",
+    "category": "Tech",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+    "seats": 120,
+    "featured": true
+  },
+  {
+    "_id": "2",
+    "title": "Live Music Festival",
+    "date": "2025-06-30",
+    "location": "Chittagong",
+    "category": "Music",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
+    "seats": 200,
+    "featured": true
+  },
+  {
+    "_id": "3",
+    "title": "Business Meetup 2025",
+    "date": "2025-07-05",
+    "location": "Dhaka",
+    "category": "Business",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
+    "seats": 80,
+    "featured": true
+  },
+  {
+    "_id": "4",
+    "title": "Art & Craft Exhibition",
+    "date": "2025-07-10",
+    "location": "Khulna",
+    "category": "Art",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    "seats": 50,
+    "featured": false
+  },
+  {
+    "_id": "5",
+    "title": "Startup Pitch Day",
+    "date": "2025-07-12",
+    "location": "Dhaka",
+    "category": "Business",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    "seats": 60,
+    "featured": false
+  },
+  {
+    "_id": "6",
+    "title": "Yoga & Wellness Retreat",
+    "date": "2025-07-15",
+    "location": "Sylhet",
+    "category": "Health",
+    "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528",
+    "seats": 40,
+    "featured": false
+  },
+  {
+    "_id": "7",
+    "title": "Coding Bootcamp",
+    "date": "2025-07-20",
+    "location": "Dhaka",
+    "category": "Tech",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "seats": 100,
+    "featured": false
+  },
+  {
+    "_id": "8",
+    "title": "Music Jam Night",
+    "date": "2025-07-25",
+    "location": "Chittagong",
+    "category": "Music",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
+    "seats": 150,
+    "featured": false
+  },
+  {
+    "_id": "9",
+    "title": "Photography Workshop",
+    "date": "2025-07-28",
+    "location": "Dhaka",
+    "category": "Art",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
+    "seats": 30,
+    "featured": false
+  },
+  {
+    "_id": "10",
+    "title": "Business Strategy Seminar",
+    "date": "2025-08-01",
+    "location": "Khulna",
+    "category": "Business",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    "seats": 70,
+    "featured": false
+  },
+  {
+    "_id": "11",
+    "title": "Tech Meetup Night",
+    "date": "2025-08-05",
+    "location": "Sylhet",
+    "category": "Tech",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "seats": 90,
+    "featured": false
+  },
+  {
+    "_id": "12",
+    "title": "Open Mic Night",
+    "date": "2025-08-10",
+    "location": "Dhaka",
+    "category": "Music",
+    "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528",
+    "seats": 120,
+    "featured": false
+  }
+]
