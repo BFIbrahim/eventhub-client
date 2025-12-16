@@ -6,6 +6,7 @@ import EventDetails from "../Pages/EventDetails/EventDetails";
 import LoginPage from "../Pages/Authentication/LoginPage";
 import RegisterPage from "../Pages/Authentication/RegistrationPage";
 import EventRegistration from "../Pages/EventRegistration/EventRegistration";
+import AddEvent from "../Pages/AddNewEvent/AddNewEvent";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
         {
           path:'/eventregister',
           Component: EventRegistration
+        },
+        {
+          path: '/add-new-event',
+          Component: AddEvent
         }
     ]
   },

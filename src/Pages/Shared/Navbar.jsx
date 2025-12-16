@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import UseAuth from '../../Hooks/UseAuth';
+import useAxios from '../../Hooks/useAxios';
 
 const Navbar = () => {
 
-    const {user, logOut} = UseAuth()
+    const { user, logOut } = UseAuth()
     console.log(user)
 
-    const hundleLogout = () =>{
+    const axios = useAxios()
+    const [loadeduser, setLoadedUser] = useState([])
+
+    useEffect(() => {
+        axios.get('/users')
+        .then(res => {
+            console.log(res.data)
+            setLoadedUser(res.data)
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+    }, [])
+
+
+
+    const hundleLogout = () => {
         logOut()
     }
 
@@ -15,7 +32,10 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/events">Events</NavLink></li>
         <li><NavLink to="/">My Bookings</NavLink></li>
-        <li><NavLink to="/">Add Event</NavLink></li>
+        
+        {
+            loadeduser.map(user => user.role === "admin" ? <li><NavLink to="/add-new-event">Add Event</NavLink></li> : <></>)
+        }
     </>
 
     return (
