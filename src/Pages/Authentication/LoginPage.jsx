@@ -1,10 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import UseAuth from "../../Hooks/UseAuth";
 
 
 const LoginPage = () => {
+
+  const {signInUser} = UseAuth()
+
+  const navigate = useNavigate()
+
   const {
     register,
     handleSubmit,
@@ -12,8 +18,16 @@ const LoginPage = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Login Data:", data);
-    
+    const {email, password} = data
+    signInUser(email, password)
+    .then(result => {
+      console.log("login successful", result.user)
+      navigate('/')
+      
+    })
+    .catch(error => {
+      console.log(error.message)
+    })
   };
 
   const handleGoogleLogin = () => {
