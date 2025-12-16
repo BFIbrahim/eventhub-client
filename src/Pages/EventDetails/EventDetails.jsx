@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
+import UseAuth from "../../Hooks/UseAuth";
 
 
 const EventDetails = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
+  const {user} = UseAuth()
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch("/events.json")
@@ -15,6 +18,18 @@ const EventDetails = () => {
       })
       .catch(err => console.error(err));
   }, [id]);
+
+  const hundleNavigate = () => {
+    if(!user){
+      navigate('/login', {
+        state: { from: `/events/${id}` }
+      })
+    } else{
+      navigate('/eventregister', {
+        state: { event }
+      })
+    }
+  }
 
   if (!event) return <p className="text-center mt-10">Loading...</p>;
 
@@ -44,9 +59,9 @@ const EventDetails = () => {
             <p className="text-base-content/80">{event.description}</p>
           </div>
 
-          <button className="btn btn-primary mt-6 w-full lg:w-1/2">
+          <Link state={{ event }}><button onClick={hundleNavigate} className="btn btn-primary mt-6 w-full lg:w-1/2">
             Register Now
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

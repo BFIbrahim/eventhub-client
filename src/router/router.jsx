@@ -5,6 +5,7 @@ import Events from "../Pages/Event/Events";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import LoginPage from "../Pages/Authentication/LoginPage";
 import RegisterPage from "../Pages/Authentication/RegistrationPage";
+import EventRegistration from "../Pages/EventRegistration/EventRegistration";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
         {
           path: "eventsDetails/:id",
           Component: EventDetails
+        },
+        {
+          path:'/eventregister',
+          Component: EventRegistration
         }
     ]
   },
