@@ -21,12 +21,14 @@ const EventRegistration = () => {
 
         const registrationData = {
             userEmail: user?.email,
-            eventId: event._id,
+            eventId: event._id,  
+            event,               
             name: data.name,
             phone: data.phone,
             tickets: data.tickets,
             paymentMethod: data.paymentMethod || ""
         };
+
 
         axios.post('/registeredEvents', registrationData)
             .then(res => {
