@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import UseAuth from "../../Hooks/UseAuth";
+import useAxios from "../../Hooks/useAxios";
 
 
 const EventDetails = () => {
@@ -8,12 +9,12 @@ const EventDetails = () => {
   const [event, setEvent] = useState(null);
   const {user} = UseAuth()
   const navigate = useNavigate()
+  const axios = useAxios()
 
   useEffect(() => {
-    fetch("/events.json")
-      .then(res => res.json())
-      .then(data => {
-        const found = data.find(ev => ev._id === id);
+    axios.get("/events")
+      .then(res => {
+        const found = res.data.find(ev => ev._id === id);
         setEvent(found);
       })
       .catch(err => console.error(err));

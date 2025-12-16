@@ -31,7 +31,7 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/events">Events</NavLink></li>
-        <li><NavLink to="/">My Bookings</NavLink></li>
+        <li><NavLink to="/my-bookings">My Bookings</NavLink></li>
         
         {
             loadeduser.map(user => user.role === "admin" ? <li><NavLink to="/add-new-event">Add Event</NavLink></li> : <></>)

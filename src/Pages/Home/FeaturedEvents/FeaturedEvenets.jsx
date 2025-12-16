@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import EventCard from "../../../Components/EventCard";
+import useAxios from "../../../Hooks/useAxios";
 
 const FeaturedEvents = () => {
   const [events, setEvents] = useState([]);
+  const axios = useAxios()
 
 
 
   useEffect(() => {
-    fetch("/events.json")
-      .then(res => res.json())
-      .then(data => {
-        const featured = data.filter(event => event.featured === true);
-        setEvents(featured.slice(0, 3)); // top 3 featured
+    axios.get("/events")
+    
+      .then(res => {
+        setEvents(res.data.slice(0, 3));
       })
       .catch(err => console.error(err));
   }, []);
