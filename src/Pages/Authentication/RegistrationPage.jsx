@@ -2,8 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
+import UseAuth from "../../Hooks/UseAuth";
 
 const RegisterPage = () => {
+
+  const {createUser} = UseAuth()
+
+
+
   const {
     register,
     handleSubmit,
@@ -11,8 +17,15 @@ const RegisterPage = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Register Data:", data);
+    const {email, password} = data
 
+    createUser(email, password)
+    .then(result => {
+      console.log('User created', result.user)
+    })
+    .catch(error => {
+      console.log(error.message)
+    })
 };
 
   const handleGoogleRegister = () => {

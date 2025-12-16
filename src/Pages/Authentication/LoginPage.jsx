@@ -13,6 +13,7 @@ const LoginPage = () => {
 
   const onSubmit = (data) => {
     console.log("Login Data:", data);
+    
   };
 
   const handleGoogleLogin = () => {
