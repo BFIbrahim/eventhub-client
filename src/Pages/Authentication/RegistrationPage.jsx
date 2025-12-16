@@ -1,13 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import UseAuth from "../../Hooks/UseAuth";
+import useAxios from "../../Hooks/useAxios";
 
 const RegisterPage = () => {
 
-  const {createUser} = UseAuth()
-
+  const { createUser, updateUserProfile, signInWithGoogle } = UseAuth()
+  const navigate = useNavigate()
+  const axios = useAxios()
 
 
   const {
@@ -17,19 +19,44 @@ const RegisterPage = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const {email, password} = data
+    const { name, email, password } = data;
 
     createUser(email, password)
-    .then(result => {
-      console.log('User created', result.user)
-    })
-    .catch(error => {
-      console.log(error.message)
-    })
-};
+      .then(result => {
+        console.log('User created', result.user);
+
+        updateUserProfile({ displayName: name })
+          .then(() => {
+            console.log("Profile updated with name:", name);
+
+            const newUser = { email, role: 'user', name }
+            axios.post('/users', newUser)
+              .then(res => {
+                console.log('user added to mongoDB', res.data)
+                navigate('/')
+              })
+              .catch(error => {
+                console.log('mongoDB error', error.message)
+              })
+
+          })
+          .catch(err => console.log(err.message));
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  };
+
 
   const handleGoogleRegister = () => {
     console.log("Google register clicked");
+    signInWithGoogle()
+      .then(result => {
+        console.log(result.user)
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
   };
 
   return (
@@ -39,6 +66,16 @@ const RegisterPage = () => {
         <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
 
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Full Name"
+            {...register("name", { required: "Name is required" })}
+            className="input input-bordered w-full"
+          />
+          {errors.name && (
+            <span className="text-red-500 text-sm">{errors.name.message}</span>
+          )}
+
           <input
             type="email"
             placeholder="Email"

@@ -7,7 +7,7 @@ import UseAuth from "../../Hooks/UseAuth";
 
 const LoginPage = () => {
 
-  const {signInUser} = UseAuth()
+  const { signInUser, signInWithGoogle } = UseAuth()
 
   const navigate = useNavigate()
 
@@ -18,20 +18,27 @@ const LoginPage = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const {email, password} = data
+    const { email, password } = data
     signInUser(email, password)
-    .then(result => {
-      console.log("login successful", result.user)
-      navigate('/')
-      
-    })
-    .catch(error => {
-      console.log(error.message)
-    })
+      .then(result => {
+        console.log("login successful", result.user)
+        navigate('/')
+
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
   };
 
   const handleGoogleLogin = () => {
     console.log("Google login clicked");
+    signInWithGoogle()
+      .then(result => {
+        console.log(result.user)
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
   };
 
   return (
