@@ -8,6 +8,7 @@ import RegisterPage from "../Pages/Authentication/RegistrationPage";
 import EventRegistration from "../Pages/EventRegistration/EventRegistration";
 import AddEvent from "../Pages/AddNewEvent/AddNewEvent";
 import MyBookings from "../Pages/MyBookings/MyBookings";
+import Profile from "../Pages/ProfilePage/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
         {
           path: '/my-bookings',
           Component: MyBookings
+        },
+        {
+          path: '/profile',
+          Component: Profile
         }
     ]
   },

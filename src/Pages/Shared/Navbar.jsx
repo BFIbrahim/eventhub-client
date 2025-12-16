@@ -64,7 +64,7 @@ const Navbar = () => {
                 }
 
                 {
-                    user ? <h3 className='px-2 text-xl font-semibold'>{user.displayName}</h3> : <></>
+                    user ? <Link to="/profile" className='px-2 text-xl font-semibold'>{user.displayName}</Link> : <></>
                 }
             </div>
         </div>
