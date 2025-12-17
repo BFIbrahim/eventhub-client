@@ -20,14 +20,12 @@ const MyBookings = () => {
     }
   }, [user]);
 
-  // Cancel Booking
   const handleCancel = async (id) => {
     if (!window.confirm("Are you sure you want to cancel this booking?")) return;
 
     try {
       const res = await axios.delete(`/registeredEvents/${id}`);
       alert(res.data.message);
-      // Remove booking from state
       setBookings(bookings.filter((b) => b._id !== id));
     } catch (error) {
       console.error(error);
@@ -35,7 +33,6 @@ const MyBookings = () => {
     }
   };
 
-  // Submit Review
   const handleReviewSubmit = async (booking) => {
     if (rating === 0 || comment.trim() === "") {
       return alert("Please provide rating and comment");
@@ -55,7 +52,6 @@ const MyBookings = () => {
       alert(res.data.message);
       setRating(0);
       setComment("");
-      // Close modal manually
       document.getElementById(`review-modal-${booking._id}`).checked = false;
     } catch (error) {
       console.error(error);
@@ -76,6 +72,7 @@ const MyBookings = () => {
               key={booking._id}
               className="bg-white shadow rounded-lg p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
             >
+              {console.log(booking._id)}
               <div>
                 <h3 className="text-xl font-semibold">{booking.event.title}</h3>
                 <p className="text-sm text-gray-600">Date: {booking.event.date}</p>
@@ -98,7 +95,6 @@ const MyBookings = () => {
                 </button>
               </div>
 
-              {/* Review Modal */}
               <input
                 type="checkbox"
                 id={`review-modal-${booking._id}`}
@@ -110,7 +106,7 @@ const MyBookings = () => {
                     htmlFor={`review-modal-${booking._id}`}
                     className="btn btn-sm btn-circle absolute right-2 top-2"
                   >
-                    ✕
+                    close
                   </label>
                   <h3 className="font-bold text-lg mb-3">
                     Review: {booking.event.title}

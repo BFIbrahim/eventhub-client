@@ -73,8 +73,8 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link className="btn btn-ghost text-xl font-bold text-white">
-          EventHub
+        <Link to="/" className="btn btn-ghost text-xl font-bold text-white">
+          Event
         </Link>
       </div>
 

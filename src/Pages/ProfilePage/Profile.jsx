@@ -25,16 +25,13 @@ const Profile = () => {
     }
   }, [user]);
 
-  // 🔹 Input change handler
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProfileData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // 🔹 Toggle edit / cancel edit
   const handleEditToggle = () => {
     if (isEdit && user) {
-      // Cancel → restore original data
       setProfileData({
         name: user.displayName || "",
         email: user.email || "",
