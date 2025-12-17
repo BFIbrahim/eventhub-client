@@ -2,22 +2,19 @@ import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/pagination";
+import useAxios from "../../../Hooks/useAxios";
 
 const RecentReviews = () => {
   const [reviews, setReviews] = useState([]);
+  const axios = useAxios();
 
   useEffect(() => {
-    fetch("/reviews.json")
-      .then(res => res.json())
-      .then(data => {
-        const sorted = data.sort(
-          (a, b) => new Date(b.date) - new Date(a.date)
-        );
-        setReviews(sorted.slice(0, 9));
-      })
-      .catch(err => console.error(err));
+    axios.get("/reviews")
+      .then(res => setReviews(res.data))
+      .catch(err => console.error(err.message));
   }, []);
 
   return (
@@ -39,30 +36,38 @@ const RecentReviews = () => {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 }
         }}
-        className="mySwiper"
-        grabCursor={true} 
+        grabCursor
       >
         {reviews.map(review => (
-          <SwiperSlide key={review.id} className="flex justify-center">
+          <SwiperSlide key={review._id} className="flex justify-center">
             <div className="p-6 border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-base-content">{review.user}</h3>
+                  <h3 className="font-semibold text-base-content">
+                    {review.userName}
+                  </h3>
+
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <FaStar
                         key={i}
                         className={`h-4 w-4 ${
-                          i < review.rating ? "text-yellow-400" : "text-gray-300"
+                          i < review.rating
+                            ? "text-yellow-400"
+                            : "text-gray-300"
                         }`}
                       />
                     ))}
                   </div>
                 </div>
-                <p className="text-base-content/70 text-sm">{review.comment}</p>
+
+                <p className="text-base-content/70 text-sm">
+                  {review.comment}
+                </p>
               </div>
+
               <p className="text-xs text-base-content/50 mt-4">
-                {new Date(review.date).toLocaleDateString()}
+                {new Date(review.createdAt).toLocaleDateString()}
               </p>
             </div>
           </SwiperSlide>
