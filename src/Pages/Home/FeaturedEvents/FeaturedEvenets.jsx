@@ -18,7 +18,7 @@ const FeaturedEvents = () => {
   }, []);
 
   return (
-    <div>
+    <div >
       <div className="text-center mb-4 mt-10">
         <h2 className="text-3xl font-bold text-base-content">Featured Events</h2>
       </div>
